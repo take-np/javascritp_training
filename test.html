@@ -1,0 +1,31 @@
+!doctype html>
+<html>
+  <head>
+    <title>test</title>
+    <script type="text/javascript">
+    function aaa(){
+      document.form1.input1.value = "test";
+    }
+    </script>
+  </head>
+  <body>
+    <form action="#" name="form1">
+      <p>
+        <input type="text" size="30" name="input1">
+        <input type="button" value="ボタン" onclick="aaa();">
+      </p>
+    </form>
+  </body>
+</html>
+
+"document.フォーム名.エレメント名.value"
+フォーム名とエレメント名 -> タグに指定されている<strong>name属性</strong>のこと
+
+より正式な書き方
+
+> document.forms["フォーム名"].elements["エレメント名"].value
+
+※"フォーム名""エレメント名"は文字列リテラルのため、文字列を入れた変数でも利用可能
+
+alert(document.forms["フォーム名"].elements["エレメント名"].value);とすれば、
+そのときにinput要素に入力されている内容が表示される
